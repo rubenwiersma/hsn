@@ -32,16 +32,14 @@ class HarmonicResNetBlock(torch.nn.Module):
         super(HarmonicResNetBlock, self).__init__()
         self.prev_order = prev_order
         
-        self.conv1 = HarmonicConv(in_channels, out_channels, prev_order, max_order, n_rings, offset, separate_streams)
+        self.conv1 = HarmonicConv(in_channels, out_channels, max_order, n_rings, prev_order, offset, separate_streams)
         self.nonlin1 = ComplexNonLin(out_channels, F.relu)
-        self.conv2 = HarmonicConv(out_channels, out_channels, max_order, max_order, n_rings, offset and not last_layer, separate_streams)
+        self.conv2 = HarmonicConv(out_channels, out_channels, max_order, n_rings, max_order, offset and not last_layer, separate_streams)
         
         self.project_residuals = in_channels != out_channels
         if self.project_residuals:
             self.lin = ComplexLin(in_channels, out_channels)
         self.nonlin2 = ComplexNonLin(out_channels, F.relu)
-
-        self.residuals = residuals
 
 
     def forward(self, x, edge_index, precomp, connection=None):

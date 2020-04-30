@@ -66,17 +66,14 @@ class FAUSTRemeshed(InMemoryDataset):
 
         path = osp.join(self.raw_dir, 'shapes')
         path = osp.join(path, 'tr_reg_{0:03d}.ply')
-        faust_diameter = osp.join(self.raw_dir, 'diameters.pt')
         data_list = []
         file_idx = 0
         for i in progressbar.progressbar(range(100)):
             data = read_ply(path.format(i))
-            data.diameter = torch.load(faust_diameter)[i]
             if self.pre_filter is not None and not self.pre_filter(data):
                 continue
             if self.pre_transform is not None:
                 data = self.pre_transform(data)
-            del(data.diameter)
             data_list.append(data)
             if i == 79 or i == 99:
                 torch.save(self.collate(data_list), self.processed_paths[file_idx])

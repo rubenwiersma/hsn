@@ -1,15 +1,15 @@
-# Harmonic Surface Networks
-Code for [CNNs on Surfaces using Rotation-Equivariant Features](https://doi.org/10.1145/3386569.3392437).
+# CNNs on Surfaces using Rotation-Equivariant Features.
+
+## [[Paper]](https://doi.org/10.1145/3386569.3392437) [[Project page]](https://rubenwiersma.nl/hsn) 
 
 Jump to:
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Replicating experiments from the paper](#replicating-experiments)
 
-<img src="img/representative.jpg" width="50%">
+<img src="img/representative.jpg" width="80%">
 
-## Abstract
-This paper is concerned with a fundamental problem in geometric deep learning that arises in the construction of convolutional neural networks on surfaces. Due to curvature, the transport of filter kernels on surfaces results in a rotational ambiguity, which prevents a uniform alignment of these kernels on the surface. We propose a network architecture for surfaces that consists of vector-valued, rotation-equivariant features. The equivariance property makes it possible to locally align features, which were computed in arbitrary coordinate systems, when aggregating features in a convolution layer. The resulting network is agnostic to the choices of coordinate systems for the tangent spaces on the surface. We implement our approach for triangle meshes. Based on circular harmonic functions, we introduce convolution filters for meshes that are rotation-equivariant at the discrete level. We evaluate the resulting networks on shape correspondence and shape classifications tasks and compare their performance to other approaches.
+Code for Harmonic Surface Networks, an approach for deep learning on surfaces operating on vector-valued, rotation-equivariant features. This is achieved by learning circular harmonic kernels and separating features in streams of different equivariance classes. The advantage of our approach is that the rotational degree of freedom, arising when a filter kernel is transported along a surface, has no effect on the network. The filters can be evaluated in arbitrarily chosen coordinate systems.
 
 ## Dependencies
 This project requires the following dependencies. The version numbers have been tested and shown to work.
@@ -26,12 +26,12 @@ $ git clone --recurse-submodules https://github.com/rubenwiersma/hsn.git
 Install the `vectorheat` python module, explained in the following subsection.
 
 ### The vectorheat extension
-To compute perform operations on the mesh - e.g. Vector Heat Method, surface area computation, etc. - we use [Geometry Central](https://geometry-central.net). We have created a small Python binding into a C++ function that computes these quantities globally for each vertex in a mesh. Run the following commands in your shell to install the extension:
+To perform computations on the mesh - e.g. Vector Heat Method, surface area computation, etc. - we use [Geometry Central](https://geometry-central.net). We have created a small Python binding into a C++ function that computes these quantities globally for each vertex in a mesh. Run the following commands in your shell to install the extension:
 ```
 $ pip install ./vectorheat
 ```
 
-#### Having problems?
+**Having trouble building?**
 First make sure that you have the latest version of CMake installed (> 3.10). Next, check that every dependency is present in this repo (pybind11, geometrycentral). If not, you might not have cloned submodules. To fix this:
 ```
 $ git submodule update --recursive
@@ -48,12 +48,32 @@ These notebooks can be accessed in the root of this repo.
 
 ### Datasets
 To use the datasets for these experiments, follow these steps:
-- Create a `data` folder in a convenient place (notebooks assume in the repo root).
-- Download and unzip the dataset you want to replicate and move it to the `data` folder.
-    - [Shape classification](https://surfdrive.surf.nl/files/index.php/s/ifhelkX4cd7ky8W)
-    - [Shape segmentation](https://surfdrive.surf.nl/files/index.php/s/L68uSYpHtfO6dLa)
-    - [Correspondence](https://surfdrive.surf.nl/files/index.php/s/dS6upV07js2nVjR)
-    - [Classification of MNIST mapped to a sphere](https://surfdrive.surf.nl/files/index.php/s/KzE1pqfGDwBHQ16)
+- Create a `data` folder in a convenient place (notebooks assume the repo root).
+- Download and unzip the dataset for the experiment you want to replicate and move it to the `data` folder.
+    - [Shape classification (3.4MB)](https://surfdrive.surf.nl/files/index.php/s/ifhelkX4cd7ky8W) [1]
+    - [Shape segmentation (74.1MB)](https://surfdrive.surf.nl/files/index.php/s/L68uSYpHtfO6dLa) [2]
+    - [Correspondence (remeshed) (17.4MB)](https://surfdrive.surf.nl/files/index.php/s/KLSxAN0QEsfJuBV) [3]
+        - Download the original FAUST dataset [here](http://faust.is.tue.mpg.de/) [4]
+    - [Classification of MNIST mapped to a sphere (55.8MB)](https://surfdrive.surf.nl/files/index.php/s/KzE1pqfGDwBHQ16) [5]
+
+<small>[1] Haggai Maron, Meirav Galun, Noam Aigerman, Miri Trope, Nadav Dym, Ersin Yumer,
+Vladimir G Kim, and Yaron Lipman. 2017. Convolutional neural networks on surfaces
+via seamless toric covers. ACM Trans. Graph 36, 4 (2017).
+
+[2] Zhouhui Lian et al. 2011. SHREC ’11 Track: Shape
+Retrieval on Non-rigid 3D Watertight Meshes. Eurographics Workshop on 3D Object
+Retrieval.
+
+[3] Adrien Poulenard and Maks Ovsjanikov. 2018. Multi-directional geodesic neural net-
+works via equivariant convolution. ACM Trans. Graph. 37, 6 (2018).
+
+[4] Federica Bogo, Javier Romero, Matthew Loper, and Michael J. Black. 2014. FAUST:
+Dataset and evaluation for 3D mesh registration. In CVPR. IEEE.
+
+[5] Hugo Larochelle et al. 2007. An empirical evaluation of deep architectures on problems with many factors
+of variation. In ICML. ACM.
+
+</small>
 
 <hr/>
 
