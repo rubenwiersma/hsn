@@ -1,4 +1,4 @@
-# CNNs on Surfaces using Rotation-Equivariant Features.
+# CNNs on Surfaces using Rotation-Equivariant Features
 
 ## [[Paper]](https://doi.org/10.1145/3386569.3392437) [[Project page]](https://rubenwiersma.nl/hsn) 
 
