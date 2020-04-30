@@ -2,14 +2,14 @@
 
 ## [[Paper]](https://doi.org/10.1145/3386569.3392437) [[Project page]](https://rubenwiersma.nl/hsn) 
 
-Jump to:
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Replicating experiments from the paper](#replicating-experiments)
+Code for Harmonic Surface Networks, an approach for deep learning on surfaces operating on vector-valued, rotation-equivariant features. This is achieved by learning circular harmonic kernels and separating features in streams of different equivariance classes. The advantage of our approach is that the rotational degree of freedom, arising when a filter kernel is transported along a surface, has no effect on the network. The filters can be evaluated in arbitrarily chosen coordinate systems.
+
+## Contents
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Replicating experiments from the paper](#replicating-experiments)
 
 <img src="img/representative.jpg" width="80%">
-
-Code for Harmonic Surface Networks, an approach for deep learning on surfaces operating on vector-valued, rotation-equivariant features. This is achieved by learning circular harmonic kernels and separating features in streams of different equivariance classes. The advantage of our approach is that the rotational degree of freedom, arising when a filter kernel is transported along a surface, has no effect on the network. The filters can be evaluated in arbitrarily chosen coordinate systems.
 
 ## Dependencies
 This project requires the following dependencies. The version numbers have been tested and shown to work.
