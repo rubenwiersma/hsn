@@ -42,7 +42,7 @@ class Shrec16(InMemoryDataset):
             final dataset. (default: :obj:`None`)
     """
 
-    url = 'https://www.dropbox.com/s/w16st84r6wc57u7/shrec_16.tar.gz'
+    url = 'https://surfdrive.surf.nl/files/index.php/s/ifhelkX4cd7ky8W'
     class_names = [
         'alien',
         'ants',

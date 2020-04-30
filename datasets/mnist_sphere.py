@@ -43,6 +43,7 @@ class MNISTSphere(InMemoryDataset):
             final dataset. (default: :obj:`None`)
     """
 
+    url = 'https://surfdrive.surf.nl/files/index.php/s/KzE1pqfGDwBHQ16'
     
     classes = ['0 - zero', '1 - one', '2 - two', '3 - three', '4 - four',
                '5 - five', '6 - six', '7 - seven', '8 - eight', '9 - nine']
@@ -67,6 +68,11 @@ class MNISTSphere(InMemoryDataset):
         return ['training.pt', 'test.pt']
 
     def download(self):
+        if (not os.path.exists(os.path.join(self.raw_dir, 'mnist_rotation_new'))):
+            raise RuntimeError(
+                'Dataset not found. Please download from {} and move it to {}'.
+                format(self.url, self.raw_dir))
+                
         # process and save as torch files
         print('Saving as raw torch files...')
         

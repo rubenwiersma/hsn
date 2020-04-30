@@ -40,7 +40,7 @@ class FAUSTRemeshed(InMemoryDataset):
             final dataset. (default: :obj:`None`)
     """
 
-    url = 'https://github.com/rubenwiersma/hsn'
+    url = 'https://surfdrive.surf.nl/files/index.php/s/KLSxAN0QEsfJuBV'
 
     def __init__(self, root, train=True, transform=None, pre_transform=None,
                  pre_filter=None):

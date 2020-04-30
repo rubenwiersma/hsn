@@ -55,7 +55,7 @@ class ShapeSeg(InMemoryDataset):
         'march2': 25
         }
 
-    url = 'https://github.com/rubenwiersma/hsn'
+    url = 'https://surfdrive.surf.nl/files/index.php/s/L68uSYpHtfO6dLa'
 
     def __init__(self, root, train=True, transform=None, pre_transform=None,
                  pre_filter=None):
