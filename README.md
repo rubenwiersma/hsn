@@ -12,7 +12,7 @@ Code for Harmonic Surface Networks, an approach for deep learning on surfaces op
 <img src="img/representative.jpg" width="80%">
 
 ## Dependencies
-This project requires the following dependencies. The version numbers have been tested and shown to work.
+This project requires the following dependencies. The version numbers have been tested and shown to work, other versions are likely, but not guaranteed, to work.
 - [PyTorch 1.5](https://pytorch.org)
 - [PyTorch Geometric 1.4.3 and its dependencies](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 - [Progressbar2](https://pypi.org/project/progressbar2/)
