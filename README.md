@@ -16,6 +16,7 @@ This project requires the following dependencies. The version numbers have been 
 - [PyTorch 1.5](https://pytorch.org)
 - [PyTorch Geometric 1.4.3 and its dependencies](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 - [Progressbar2](https://pypi.org/project/progressbar2/)
+- [Suitesparse](http://faculty.cse.tamu.edu/davis/suitesparse.html) (used for the Vector Heat Method)
 
 ## Installation
 Clone this repository and its submodules
@@ -37,6 +38,13 @@ First make sure that you have the latest version of CMake installed (> 3.10). Ne
 $ git submodule update --recursive
 ```
 
+**Suitesparse?** When processing shapes with the Vector Heat Method, you might run into a solver error. This is fixed when you build the `vectorheat` extension with suitesparse. Installation in Linux with:
+
+```
+$ apt-get install libsuitesparse-dev
+
+```
+
 ## Replicating experiments
 We have compiled four Jupyter Notebooks to easily replicate the experiments from the paper:
 - Shape classification
@@ -49,7 +57,7 @@ These notebooks can be accessed in the root of this repo.
 ### Datasets
 To use the datasets for these experiments, follow these steps:
 - Create a `data` folder in a convenient place (notebooks assume the repo root).
-- Download and unzip the dataset for the experiment you want to replicate and move it to the `data` folder.
+- Download and unzip the dataset for the experiment you want to replicate and move it to the `data` folder. Note: we've zipped the folder structure for easy drag and drop. The folders contain a zip file that should not be unzipped.
     - [Shape classification (3.4MB)](https://surfdrive.surf.nl/files/index.php/s/ifhelkX4cd7ky8W) [1]
     - [Shape segmentation (74.1MB)](https://surfdrive.surf.nl/files/index.php/s/L68uSYpHtfO6dLa) [2]
     - [Correspondence (remeshed) (17.4MB)](https://surfdrive.surf.nl/files/index.php/s/KLSxAN0QEsfJuBV) [3]
