@@ -15,6 +15,8 @@ Code for Harmonic Surface Networks, an approach for deep learning on surfaces op
 This project requires the following dependencies. The version numbers have been tested and shown to work, other versions are likely, but not guaranteed, to work.
 - [PyTorch 1.5](https://pytorch.org)
 - [PyTorch Geometric 1.4.3 and its dependencies](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
+  <br />There are known issues with some later versions of PyTorch geometric (specifically, 1.6.1). Our code has been tested with version 1.4.3. To install, follow the [instructions](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html) and in the last step, type:
+  <br />`$ pip install torch-geometric==1.4.3`
 - [Progressbar2](https://pypi.org/project/progressbar2/)
 - [Suitesparse](http://faculty.cse.tamu.edu/davis/suitesparse.html) (used for the Vector Heat Method)
 
