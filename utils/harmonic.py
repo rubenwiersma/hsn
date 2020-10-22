@@ -14,7 +14,7 @@ def mask_idx(lvl, edge_mask):
     :param lvl: the desired scale lvl.
     :param edge_mask: a multi-scale edge mask.
     """
-    mask = torch.nonzero(edge_mask & (0b1 << lvl)).flatten()
+    mask = torch.nonzero(edge_mask & (0b1 << lvl), as_tuple=False).flatten()
     return mask
 
 

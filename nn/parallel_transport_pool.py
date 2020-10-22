@@ -18,7 +18,7 @@ class ParallelTransportPool(MessagePassing):
         transform (obj): transform to apply to the pooled data
     """
     def __init__(self, lvl, transform=None):
-        super(ParallelTransportPool, self).__init__(aggr='mean', flow='target_to_source')
+        super(ParallelTransportPool, self).__init__(aggr='mean', flow='target_to_source', node_dim=0)
         self.lvl = lvl
         self.scale_mask = ScaleMask(lvl, True)
         self.transform = transform

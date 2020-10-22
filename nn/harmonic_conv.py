@@ -29,7 +29,7 @@ class HarmonicConv(MessagePassing):
     """
     def __init__(self, in_channels, out_channels, max_order=1, n_rings=2, prev_order=1, 
                 offset=True, separate_streams=True):
-        super(HarmonicConv, self).__init__(aggr='add', flow='target_to_source')
+        super(HarmonicConv, self).__init__(aggr='add', flow='target_to_source', node_dim=0)
 
         self.in_channels = in_channels
         self.out_channels = out_channels

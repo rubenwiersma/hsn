@@ -68,7 +68,7 @@ class HarmonicPrecomp(object):
         # Set kernel for center points to 0
         # Why this is necessary: for the center point, r = 0 and theta = 0
         # Thus, the kernel value will always be 1 + i0, pointing to the - arbitrary - choice of basis
-        exponential[torch.nonzero(r == 0)] = 0
+        exponential[torch.nonzero(r == 0), :1] = 0
 
         # Finally, normalize weighting for every neighborhood and multiply with precomputation
         weight = weight / (1e-12 + scatter_add(weight, row)[row]) # [N]
