@@ -32,6 +32,10 @@ To perform computations on the mesh - e.g. Vector Heat Method, surface area comp
 ```
 $ pip install ./vectorheat
 ```
+**[Update April 2021]** Nick Sharp has created his own bindings for the Geometry Central library, called [Potpourri3d](https://github.com/nmwsharp/potpourri3d). It also includes an implementation of the Vector Heat method for point clouds. You can install it with pip:
+```
+$ pip install potpourri3d
+```
 
 **Having trouble building?**
 First make sure that you have the latest version of CMake installed (> 3.10). Next, check that every dependency is present in this repo (pybind11, geometrycentral). If not, you might not have cloned submodules. To fix this:
