@@ -28,13 +28,16 @@ $ git clone --recurse-submodules https://github.com/rubenwiersma/hsn.git
 Install the `vectorheat` python module, explained in the following subsection.
 
 ### The vectorheat extension
+
+**[Update April 2021]** Nick Sharp has created his own bindings for the Geometry Central library, called [Potpourri3d](https://github.com/nmwsharp/potpourri3d). This library includes computations of the vector heat method on meshes **and point clouds**. You can install it with pip:
+```
+$ pip install potpourri3d
+```
+The transforms used in this repository make use of our own binding, which can be installed as follows:
+
 To perform computations on the mesh - e.g. Vector Heat Method, surface area computation, etc. - we use [Geometry Central](https://geometry-central.net). We have created a small Python binding into a C++ function that computes these quantities globally for each vertex in a mesh. Run the following commands in your shell to install the extension:
 ```
 $ pip install ./vectorheat
-```
-**[Update April 2021]** Nick Sharp has created his own bindings for the Geometry Central library, called [Potpourri3d](https://github.com/nmwsharp/potpourri3d). It also includes an implementation of the Vector Heat method for point clouds. You can install it with pip:
-```
-$ pip install potpourri3d
 ```
 
 **Having trouble building?**
