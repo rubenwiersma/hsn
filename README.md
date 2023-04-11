@@ -1,5 +1,8 @@
 # CNNs on Surfaces using Rotation-Equivariant Features
 
+## Update 2022
+If you are looking into using HSN for your own learning task, we would recommend giving [[DeltaConv]](https://github.com/rubenwiersma/deltaconv) a look. It works on point clouds as well as meshes (simply use the vertex positions) and is a lot more efficient in time and memory.
+
 ## [[Paper]](https://rubenwiersma.nl/assets/pdf/CNNs_Surfaces_Rotation_Equivariant_Features.pdf) [[Project page]](https://rubenwiersma.nl/hsn) 
 
 Code for Harmonic Surface Networks, an approach for deep learning on surfaces operating on vector-valued, rotation-equivariant features. This is achieved by learning circular harmonic kernels and separating features in streams of different equivariance classes. The advantage of our approach is that the rotational degree of freedom, arising when a filter kernel is transported along a surface, has no effect on the network. The filters can be evaluated in arbitrarily chosen coordinate systems.
