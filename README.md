@@ -1,7 +1,7 @@
 # CNNs on Surfaces using Rotation-Equivariant Features
 
 ## Update 2022
-If you are looking into using HSN for your own learning task, we would recommend giving [[DeltaConv]](https://github.com/rubenwiersma/deltaconv) a look. It works on point clouds as well as meshes (simply use the vertex positions) and is a lot more efficient in time and memory.
+If you are looking into using HSN for your own learning task, we would recommend giving [DeltaConv](https://github.com/rubenwiersma/deltaconv) a look. It works on point clouds as well as meshes (simply use the vertex positions) and is a lot more efficient in time and memory.
 
 ## [[Paper]](https://rubenwiersma.nl/assets/pdf/CNNs_Surfaces_Rotation_Equivariant_Features.pdf) [[Project page]](https://rubenwiersma.nl/hsn) 
 
