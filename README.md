@@ -69,11 +69,11 @@ These notebooks can be accessed in the root of this repo.
 To use the datasets for these experiments, follow these steps:
 - Create a `data` folder in a convenient place (notebooks assume the repo root).
 - Download and unzip the dataset for the experiment you want to replicate and move it to the `data` folder. Note: we've zipped the folder structure for easy drag and drop. The folders contain a zip file that should not be unzipped.
-    - [Shape classification (3.4MB)](https://surfdrive.surf.nl/files/index.php/s/ifhelkX4cd7ky8W) [1]
-    - [Shape segmentation (74.1MB)](https://surfdrive.surf.nl/files/index.php/s/L68uSYpHtfO6dLa) [2]
-    - [Correspondence (remeshed) (17.4MB)](https://surfdrive.surf.nl/files/index.php/s/KLSxAN0QEsfJuBV) [3]
+    - [Shape classification (3.4MB)](https://drive.google.com/file/d/1AnwgRoiNvfYsPJ88_bOtJeOAEH3Lr1OE/view?usp=sharing) [1]
+    - [Shape segmentation (74.1MB)](https://drive.google.com/file/d/1SEMjHjtkHGIboJx6WYsuwHsY9X9TDGCR/view?usp=sharing) [2]
+    - [Correspondence (remeshed) (17.4MB)](https://drive.google.com/file/d/1kxMijNthjNFdTLyv4rh6BwQu-MykxXrz/view?usp=sharing) [3]
         - Download the original FAUST dataset [here](http://faust.is.tue.mpg.de/) [4]
-    - [Classification of MNIST mapped to a sphere (55.8MB)](https://surfdrive.surf.nl/files/index.php/s/KzE1pqfGDwBHQ16) [5]
+    - [Classification of MNIST mapped to a sphere (55.8MB)](https://drive.google.com/file/d/1DbHXzV72hPFQeEbz5CKCxEpuCL_nzSYm/view?usp=sharing) [5]
 
 <small>[1] Haggai Maron, Meirav Galun, Noam Aigerman, Miri Trope, Nadav Dym, Ersin Yumer,
 Vladimir G Kim, and Yaron Lipman. 2017. Convolutional neural networks on surfaces
